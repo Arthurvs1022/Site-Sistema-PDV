@@ -1,0 +1,414 @@
+/* Importação de Fonte Google Fonts: Montserrat */
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&display=swap');
+
+/* VARIÁVEIS DE COR */
+:root {
+    --primary-color: #007BFF; /* Azul Forte */
+    --secondary-color: #FFC107; /* Amarelo/Laranja */
+    --text-color: #343A40; /* Cinza Escuro */
+    --light-bg: #f8f9fa; /* Fundo Leve */
+    --white: #ffffff;
+}
+
+/* RESET E ESTILOS GERAIS */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Montserrat', sans-serif;
+    color: var(--text-color);
+    line-height: 1.6;
+}
+
+.container {
+    width: 90%;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.section-padding {
+    padding: 80px 0;
+}
+
+.section-title {
+    text-align: center;
+    margin-bottom: 50px;
+    font-size: 2em;
+    color: var(--primary-color);
+}
+
+.bg-light {
+    background-color: var(--light-bg);
+}
+
+/* BOTÕES (CTAs) */
+.btn {
+    display: inline-block;
+    padding: 10px 25px;
+    border-radius: 5px;
+    text-decoration: none;
+    font-weight: 600;
+    transition: background-color 0.3s ease;
+    border: 2px solid transparent;
+}
+
+.btn-primary {
+    background-color: var(--primary-color);
+    color: var(--white);
+    border-color: var(--primary-color);
+}
+
+.btn-primary:hover {
+    background-color: #0056b3;
+    border-color: #0056b3;
+}
+
+.btn-secondary {
+    background-color: var(--secondary-color);
+    color: var(--text-color);
+    border-color: var(--secondary-color);
+}
+
+.btn-secondary:hover {
+    background-color: #e0a800;
+    border-color: #e0a800;
+}
+
+.btn-demo {
+    background-color: transparent;
+    border-color: var(--primary-color);
+    color: var(--primary-color);
+    padding: 8px 20px;
+}
+
+.btn-demo:hover {
+    background-color: var(--primary-color);
+    color: var(--white);
+}
+
+/* 1. CABEÇALHO */
+.header {
+    background-color: var(--white);
+    padding: 15px 0;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+.header .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo {
+    font-size: 1.8em;
+    color: var(--primary-color);
+    font-weight: 700;
+}
+
+.nav a {
+    color: var(--text-color);
+    text-decoration: none;
+    margin-left: 25px;
+    font-weight: 600;
+}
+
+.nav a:hover {
+    color: var(--primary-color);
+}
+
+/* 2. SEÇÃO HERO */
+.hero {
+    background: linear-gradient(135deg, var(--white) 0%, var(--light-bg) 100%);
+    padding: 100px 0;
+    text-align: left;
+}
+
+.hero .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 40px;
+}
+
+.hero-content {
+    flex: 1;
+    max-width: 55%;
+}
+
+.hero-content h2 {
+    font-size: 3em;
+    margin-bottom: 20px;
+    color: var(--primary-color);
+    line-height: 1.1;
+}
+
+.hero-content p {
+    font-size: 1.2em;
+    margin-bottom: 30px;
+}
+
+.hero-image {
+    flex: 1;
+    max-width: 45%;
+    /* Estilo para o placeholder da imagem */
+    height: 300px;
+    background-color: #ccc; 
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.hero-image img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+}
+
+/* 3. FUNCIONALIDADES */
+.features-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 30px;
+    text-align: center;
+}
+
+.feature-item {
+    padding: 30px;
+    background-color: var(--white);
+    border-radius: 8px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+    transition: transform 0.3s;
+}
+
+.feature-item:hover {
+    transform: translateY(-5px);
+}
+
+.feature-icon {
+    font-size: 3em;
+    color: var(--secondary-color);
+    margin-bottom: 15px;
+}
+
+.feature-item h4 {
+    color: var(--primary-color);
+    margin-bottom: 10px;
+}
+
+/* 4. SOLUÇÕES */
+.solutions-grid {
+    display: flex;
+    justify-content: space-around;
+    gap: 30px;
+    text-align: center;
+}
+
+.solution-item {
+    flex: 1;
+    padding: 20px;
+}
+
+.solution-item i {
+    font-size: 2.5em;
+    color: var(--primary-color);
+    margin-bottom: 10px;
+}
+
+/* 5. PLANOS E PREÇOS */
+.pricing-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 30px;
+    text-align: center;
+}
+
+.plan {
+    background-color: var(--white);
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+    border: 1px solid #ddd;
+}
+
+.plan h4 {
+    font-size: 1.5em;
+    color: var(--text-color);
+    margin-bottom: 15px;
+}
+
+.price {
+    font-size: 2.5em;
+    font-weight: 700;
+    color: var(--primary-color);
+    margin-bottom: 20px;
+}
+
+.price span {
+    font-size: 0.5em;
+    font-weight: 400;
+}
+
+.plan ul {
+    list-style: none;
+    margin-bottom: 30px;
+    text-align: left;
+    padding-left: 0;
+}
+
+.plan ul li {
+    padding: 10px 0;
+    border-bottom: 1px solid #eee;
+}
+
+.plan ul li i {
+    margin-right: 10px;
+    color: green;
+}
+
+.plan.popular {
+    border: 3px solid var(--secondary-color);
+    transform: scale(1.05);
+    position: relative;
+    padding-top: 50px;
+}
+
+.plan.popular .tag {
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%) translateY(-50%);
+    background-color: var(--secondary-color);
+    color: var(--text-color);
+    padding: 5px 15px;
+    border-radius: 20px;
+    font-weight: 700;
+    font-size: 0.9em;
+}
+
+/* 6. RODAPÉ */
+.footer {
+    background-color: var(--text-color);
+    color: var(--white);
+    padding: 50px 0 20px 0;
+}
+
+.footer-grid {
+    display: grid;
+    grid-template-columns: 2fr 1fr 1fr;
+    gap: 40px;
+    padding-bottom: 30px;
+    border-bottom: 1px solid #555;
+}
+
+.footer-col h4 {
+    color: var(--primary-color);
+    margin-bottom: 15px;
+    font-size: 1.2em;
+}
+
+.footer-col p {
+    margin-bottom: 10px;
+}
+
+.footer-col ul {
+    list-style: none;
+}
+
+.footer-col ul li a {
+    color: var(--white);
+    text-decoration: none;
+    display: block;
+    padding: 5px 0;
+}
+
+.footer-col ul li a:hover {
+    color: var(--primary-color);
+}
+
+.social-icons a {
+    color: var(--white);
+    font-size: 1.5em;
+    margin-right: 15px;
+    transition: color 0.3s;
+}
+
+.social-icons a:hover {
+    color: var(--secondary-color);
+}
+
+.copyright {
+    text-align: center;
+    margin-top: 20px;
+    font-size: 0.8em;
+}
+
+/* LINK DE CONTATO NO RODAPÉ */
+.link-contact {
+    color: var(--primary-color);
+    font-weight: 600;
+    text-decoration: none;
+}
+
+.link-contact:hover {
+    text-decoration: underline;
+}
+
+/* MEDIA QUERIES para responsividade */
+@media (max-width: 992px) {
+    .header .container {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+    .nav {
+        margin-top: 15px;
+    }
+    .nav a {
+        margin-left: 0;
+        margin-right: 20px;
+        display: inline-block;
+    }
+    .hero .container {
+        flex-direction: column-reverse;
+        text-align: center;
+    }
+    .hero-content, .hero-image {
+        max-width: 100%;
+        text-align: center;
+    }
+    .hero-content h2 {
+        font-size: 2.5em;
+    }
+    .features-grid, .pricing-grid, .footer-grid {
+        grid-template-columns: 1fr;
+    }
+    .solution-item {
+        flex-basis: 100%;
+    }
+    .plan.popular {
+        transform: none;
+    }
+}
+
+@media (max-width: 576px) {
+    .hero-content h2 {
+        font-size: 2em;
+    }
+    .nav a {
+        display: block;
+        margin: 5px 0;
+    }
+    .btn-demo {
+        margin-top: 10px;
+        display: block;
+    }
+    .section-padding {
+        padding: 40px 0;
+    }
+}
